@@ -7,11 +7,14 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { useNavigate } from 'react-router';
 import { FavoritesContext } from '../Context/FavoritesContext';
 import Swal from 'sweetalert2'
+import { BasketContext } from '../Context/BasketContext';
 
 function Products() {
 
     let { products, setProducts } = useContext(ProductContext)
     let { favorites, setFavorites } = useContext(FavoritesContext)
+    let {basket,setBasket}=useContext(BasketContext)
+
     let navigate = useNavigate()
 
     function handleNavigateDetail(id) {
@@ -36,6 +39,14 @@ function Products() {
             setFavorites([...favorites, product])
         }
     }
+
+    // function handleAddBasket(product){
+    //     let findBasket = basket.find(item => item._id !== product._id)
+    //     if (findBasket) {
+    //         console.log("1");
+    // }else{
+    //     setBasket([...basket,product])
+    // }
 
 
     let [search, setSearch] = useState("")
