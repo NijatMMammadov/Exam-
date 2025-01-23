@@ -3,6 +3,7 @@ import Hero from '../../Components/Hero'
 import Products from '../../Components/Products'
 import { Helmet } from "react-helmet"
 import Collections from '../../Components/Collections'
+import Sale from '../../Components/Sale'
 function Home() {
     return (
         <>
@@ -14,6 +15,7 @@ function Home() {
                 <Hero />
                 <Collections/>
                 <Products />
+                <Sale/>
             </main>
         </>
     )

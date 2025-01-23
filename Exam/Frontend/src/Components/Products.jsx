@@ -8,9 +8,7 @@ import { useNavigate } from 'react-router';
 import { FavoritesContext } from '../Context/FavoritesContext';
 import Swal from 'sweetalert2'
 
-
 function Products() {
-
 
     let { products, setProducts } = useContext(ProductContext)
     let { favorites, setFavorites } = useContext(FavoritesContext)
@@ -36,9 +34,9 @@ function Products() {
                 timer: 1500
             });
             setFavorites([...favorites, product])
-
         }
     }
+
 
     let [search, setSearch] = useState("")
     let filteredSearch = products.filter(product => {

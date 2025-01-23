@@ -3,13 +3,16 @@ import './index.css'
 import App from './App.jsx'
 import FavoritesProvider from './Context/FavoritesContext.jsx'
 import ProductProvider from './Context/ProductContext.jsx'
+import BasketProvider from './Context/BasketContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <>
-    <ProductProvider>
-      <FavoritesProvider>
-        <App />
-      </FavoritesProvider>
-    </ProductProvider>
+    <BasketProvider>
+      <ProductProvider>
+        <FavoritesProvider>
+          <App />
+        </FavoritesProvider>
+      </ProductProvider>
+    </BasketProvider>
   </>,
 )
